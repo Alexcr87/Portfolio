@@ -3,6 +3,7 @@ import NavBar from "@/components/navBar/NavBar";
 import "./globals.css"
 import type { Metadata } from "next";
 import Home from "./page";
+import Footer from "@/components/footer/fotter";
 
 
 export const metadata: Metadata = {
@@ -30,6 +31,7 @@ export default function RootLayout({
             {children}
           </main>
           <footer>
+            <Footer />
           </footer>
         </div>
       </body>

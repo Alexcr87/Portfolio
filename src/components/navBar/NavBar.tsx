@@ -17,9 +17,9 @@ const NavBar: React.FC = () => {
           <Link href="/projects">Proyectos</Link>
         </li>
       </ul>
-      <div className='' >
+      <Link href="/">
         <Image src="/LogoPortfolio.svg" alt="Personal logo" width={100} height={60}></Image>
-      </div>
+      </Link>
       <ul className='md:flex md:bg-none mt-80 md:mt-0 gap-8 pr-8 text-cuartiaryColor p-8 md:p-0 '>
         <li className='md:bg-none  py-4 md:py-0 px-2'>
           <Link href="/aboutMe">Sobre Mi</Link>

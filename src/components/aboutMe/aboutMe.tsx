@@ -1,14 +1,14 @@
 import { tourney } from "@/fonts"
-import "@/utils/starWarsEffect.css"
+
 
 export const AboutMe = () => {
   return (
-    <div className={`${tourney.variable} font-tourney text-white p-8`}>
+    <div className={`${tourney.variable} font-tourney text-white  p-8`}>
       <h1 className="font-tourney flex justify-center text-8xl">¡Hola!</h1>
-      <h2 className="font-tourney flex justify-center text-6xl">
+      <h2 className="font-tourney  flex justify-center text-6xl">
         Mi nombre es Christian,
       </h2>
-      <div className="star-wars-container">
+      <div className="star-wars-container flex justify-center">
         <div className="star-wars-wrapper">
           <p className="star-wars-text text-2xl">
             Soy desarrollador Full Stack y analista de sistemas con una sólida base en desarrollo web y una gran pasión por la tecnología.

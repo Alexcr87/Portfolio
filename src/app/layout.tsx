@@ -18,24 +18,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-
   return (
     <html lang="en">
-      <body className="bg-black h-14 flex" >
-        <div>
-          <header>
-            <NavBar />
-          </header>
-          <main className="mt-14">
-            <AboutMe />
-            {children}
-
-          </main>
-          <footer>
-            <Footer />
-          </footer>
-        </div>
+      <body className="bg-black min-h-screen flex flex-col">
+        <header className="fixed top-0 w-full z-10">
+          <NavBar />
+        </header>
+        <main className="pt-14 flex-1">
+          <AboutMe />
+          {children}
+        </main>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );

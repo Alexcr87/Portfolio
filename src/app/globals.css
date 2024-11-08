@@ -15,7 +15,7 @@
 
 :root{
     --primary-color: #1D1D1D;
-    --secundary-color: #fe911b;
+    --secundary-color: #2272FF;
     --tertiary-color: #DBE0E0;
     --cuartiary-color: #e8ebfd;
 }
@@ -105,6 +105,42 @@
     transform: translateZ(-400px) translateY(-200px); /* Suaviza el cambio */
   }
   
+}
+
+/* Clase para el efecto de neón */
+.neon-text {
+  color: #2272FF; /* Color principal del texto */
+  text-shadow:
+    0 0 5px #2272FF,
+    0 0 10px #2272FF,
+    0 0 15px #2272FF,
+    0 0 20px #2272FF,
+    0 0 30px #2272FF,
+    0 0 40px #2272FF,
+    0 0 55px #2272FF,
+    0 0 75px #2272FF; /* Brillo y difuminado alrededor del texto */
+}
+
+/* Animación de parpadeo para el texto */
+@keyframes neon-flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 5px #2272FF,
+      0 0 10px #2272FF,
+      0 0 15px #2272FF,
+      0 0 20px #2272FF,
+      0 0 30px #2272FF,
+      0 0 40px #2272FF,
+      0 0 55px #2272FF,
+      0 0 75px #2272FF;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+.neon-text {
+  animation: neon-flicker 3.5s ;
 }
 
 

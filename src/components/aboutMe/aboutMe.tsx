@@ -18,8 +18,8 @@ export const AboutMe = () => {
 
   return (
     <div className={`${tourney.variable} font-tourney text-white`}>
-      <h1 className="flex justify-center text-4xl sm:text-3xl md:text-5xl lg:text-6xl text-[#2272FF]">¡Hola!</h1>
-      <h2 className="flex justify-center text-center text-4xl sm:text-3xl md:text-4xl lg:text-6xl text-[#2272FF]">
+      <h1 className="flex justify-center text-4xl sm:text-3xl md:text-5xl lg:text-6xl neon-text">¡Hola!</h1>
+      <h2 className="flex justify-center text-center text-4xl sm:text-3xl md:text-4xl lg:text-6xl neon-text">
         Mi nombre es Christian,
       </h2>
       <div className="star-wars-container flex justify-center ">

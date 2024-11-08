@@ -29,11 +29,11 @@ const NavBar: React.FC = () => {
       >
         {/* Icono de menú */}
         <button className="text-white">
-          <span className="material-icons">menu</span>
+          <span className="material-icons">Menu</span>
         </button>
 
         {/* Menú desplegable */}
-        <div className={`absolute top-full right-0 w-35 bg-[rgba(29,29,29,0.95)] flex-col item-center gap-4 p-4 rounded-md shadow-lg transition-transform duration-300 ${isMenuOpen ? "flex" : "hidden"}`}>
+        <div className={`absolute top-full right-0 w-35 bg-[rgba(29,29,29,0.95)] flex-col gap-4 p-4 rounded-md shadow-lg transition-transform duration-300 ${isMenuOpen ? "flex" : "hidden"}`}>
           <ul className="flex flex-col gap-4 text-cuartiaryColor">
             <li>
               <Link href="/skills">Habilidades</Link>

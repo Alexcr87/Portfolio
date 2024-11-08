@@ -1,34 +1,33 @@
-import { tourney } from "@/fonts"
-
+"use client"
+import { useState, useEffect } from "react";
+import { tourney } from "@/fonts";
+import TextStarWars from "../textStarWars/textStarWars";
 
 export const AboutMe = () => {
+  const [renderCount, setRenderCount] = useState(0);
+
+  useEffect(() => {
+    // Configura un intervalo que actualiza el estado cada 44 segundos
+    const interval = setInterval(() => {
+      setRenderCount((prev) => prev + 1);
+    }, 52000); // 44000 ms = 44 segundos
+
+    // Limpia el intervalo cuando el componente se desmonta
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className={`${tourney.variable} font-tourney text-white  p-8`}>
-      <h1 className="font-tourney flex justify-center text-8xl">¡Hola!</h1>
-      <h2 className="font-tourney  flex justify-center text-6xl">
+    <div className={`${tourney.variable} font-tourney text-white p-8 sm:p-6 md:p-10 lg:p-12`}>
+      <h1 className="flex justify-center text-6xl sm:text-5xl md:text-7xl lg:text-8xl">¡Hola!</h1>
+      <h2 className="flex justify-center text-center text-4xl sm:text-3xl md:text-5xl lg:text-6xl">
         Mi nombre es Christian,
       </h2>
-      <div className="star-wars-container flex justify-center">
-        <div className="star-wars-wrapper">
-          <p className="star-wars-text text-2xl">
-            Soy desarrollador Full Stack y analista de sistemas con una sólida base en desarrollo web y una gran pasión por la tecnología.
-          </p>
-          <p className="star-wars-text text-2xl">
-            Con una trayectoria de más de 10 años en resolución de problemas, gestión de equipos y mejora de procesos, recientemente he enfocado mi carrera en el desarrollo de software, combinando mi experiencia profesional en administración y servicio al cliente con habilidades técnicas de programación.
-          </p>
-          <p className="star-wars-text text-2xl">
-            Mi stack principal incluye Next.js, NestJS, React, Node.js, TypeScript, JavaScript, PostgreSQL, MongoDB, Tailwind CSS y Git, así como herramientas de desarrollo y colaboración como OAuth2, Cloudinary, Nodemailer, Redux, TypeORM y Jira.
-          </p>
-          <p className="star-wars-text text-2xl">
-            A través de proyectos realizados durante mi tiempo como Teaching Assistant en Henry Bootcamp y en experiencias profesionales, he tenido la oportunidad de liderar la implementación de autenticación segura (usando Auth0 y OAuth2), configurar arquitecturas backend en NestJS, y manejar flujos de pago con integraciones de terceros como Mercado Pago.
-          </p>
-          <p className="star-wars-text text-2xl">
-            Además, mi enfoque en el desarrollo de aplicaciones escalables y seguras está respaldado por una constante orientación al cliente y al detalle, cualidades que desarrollé a lo largo de mis años de experiencia en administración y en la mejora de espacios públicos.
-          </p>
-        </div>
+      <div className="star-wars-container flex justify-center ">
+        {/* Renderiza TextStarWars cada vez que cambia renderCount */}
+        <TextStarWars key={renderCount} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AboutMe
+export default AboutMe;

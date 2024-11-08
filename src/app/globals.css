@@ -63,7 +63,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  text-align: center;
+  text-align: justify;
   transform: rotateX(30deg); /* Inclinación a 30 grados */
   animation: scrollStarWars 85s linear infinite;
 }
@@ -75,7 +75,8 @@
   animation-fill-mode: both;
   transform-origin: 50% 100%;
   backface-visibility: hidden; /* Evita el parpadeo */
-  margin-bottom: 5rem;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 
@@ -91,17 +92,19 @@
 
 /* Animación para cada párrafo: alejamiento en Z y opacidad */
 @keyframes scrollParagraph {
-  0%, 10% {
+  0%, 20% {
     opacity: 1;
     transform: translateZ(0) translateY(0);
   }
   40%, 70% {
     opacity: 1;
-    transform: translateZ(-300px) translateY(-150px); /* Menos alejamiento en Z y Y */
+    transform: translateZ(-100px) translateY(-50px); /* Menos alejamiento en Z y Y */
   }
   100% {
     opacity: 0; /* Termina en opacidad 0 para que desaparezca */
-    transform: translateZ(-500px) translateY(-300px); /* Suaviza el cambio */
+    transform: translateZ(-400px) translateY(-200px); /* Suaviza el cambio */
   }
-
+  
 }
+
+

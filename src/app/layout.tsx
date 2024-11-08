@@ -1,11 +1,9 @@
-
 import NavBar from "@/components/navBar/NavBar";
 import "./globals.css"
 import { tourney } from "@/fonts"
 import type { Metadata } from "next";
 import Footer from "@/components/footer/fotter";
 import AboutMe from "@/components/aboutMe/aboutMe";
-
 
 export const metadata: Metadata = {
   title: "Christian Rugna",
@@ -24,11 +22,13 @@ export default function RootLayout({
         <header className="fixed top-0 w-full z-10">
           <NavBar />
         </header>
-        <main className="pt-14 flex-1">
+        <main className="pt-14 sm:pt-16 md:pt-20 flex-1">
+          {/* Componente AboutMe ajustado para pantallas más pequeñas */}
           <AboutMe />
-          {children}
+          {/* El contenido hijo también será responsivo */}
+          <div className="px-4 sm:px-6 md:px-8">{children}</div>
         </main>
-        <footer>
+        <footer className="mt-auto">
           <Footer />
         </footer>
       </body>

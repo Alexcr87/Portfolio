@@ -65,24 +65,19 @@
   width: 100%;
   text-align: center;
   transform: rotateX(30deg); /* Inclinación a 30 grados */
-  animation: scrollStarWars 90s linear infinite;
+  animation: scrollStarWars 85s linear infinite;
 }
 
 /* Cada párrafo */
 .star-wars-text {
   opacity: 0;
-  animation: scrollParagraph 85s linear infinite; /* Termina antes */
+  animation: scrollParagraph 85s linear infinite;
   animation-fill-mode: both;
   transform-origin: 50% 100%;
+  backface-visibility: hidden; /* Evita el parpadeo */
+  margin-bottom: 5rem;
 }
 
-/* Demoras en la animación de cada párrafo */
-.star-wars-text:nth-child(1) { animation-delay: 0s; }
-.star-wars-text:nth-child(2) { animation-delay: 5s; }
-.star-wars-text:nth-child(3) { animation-delay: 10s; }
-.star-wars-text:nth-child(4) { animation-delay: 15s; }
-.star-wars-text:nth-child(5) { animation-delay: 20s; }
-/* Agrega más demoras si tienes más párrafos, aumentando en 5s para cada uno */
 
 /* Animación del wrapper: movimiento hacia arriba */
 @keyframes scrollStarWars {
@@ -96,16 +91,17 @@
 
 /* Animación para cada párrafo: alejamiento en Z y opacidad */
 @keyframes scrollParagraph {
-  0%, 5% {
+  0%, 10% {
     opacity: 1;
     transform: translateZ(0) translateY(0);
   }
-  30%, 70% {
+  40%, 70% {
     opacity: 1;
-    transform: translateZ(-500px) translateY(-200px); /* Alejamiento en Z y movimiento hacia arriba */
+    transform: translateZ(-300px) translateY(-150px); /* Menos alejamiento en Z y Y */
   }
   100% {
-    opacity: 1;
-    transform: translateZ(-1000px) translateY(-400px); /* Más alejamiento en Z y hacia arriba */
+    opacity: 0; /* Termina en opacidad 0 para que desaparezca */
+    transform: translateZ(-500px) translateY(-300px); /* Suaviza el cambio */
   }
+
 }

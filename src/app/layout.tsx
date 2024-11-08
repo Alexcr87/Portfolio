@@ -1,6 +1,5 @@
 import NavBar from "@/components/navBar/NavBar";
 import "./globals.css"
-import { tourney } from "@/fonts"
 import type { Metadata } from "next";
 import Footer from "@/components/footer/fotter";
 import AboutMe from "@/components/aboutMe/aboutMe";

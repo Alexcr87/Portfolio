@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-[rgba(29,29,29,0.8)] h-20 sm:h-24 md:h-28 grid grid-cols-3 items-center px-8 fixed bottom-0 w-full z-50">
+    <div className="bg-[rgba(29,29,29,0.8)] h-10 sm:h-14 md:h-18 grid grid-cols-3 items-center px-8 fixed bottom-0 w-full z-50">
       <div className="flex justify-start">
         <p className="text-white text-sm sm:text-base md:text-lg">© Christian Rugna 2024</p>
       </div>

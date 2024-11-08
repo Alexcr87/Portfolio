@@ -17,6 +17,9 @@ const config: Config = {
         tertiaryColor: "var(--tertiary-color)",
         cuartiaryColor: "var(--cuartiary-color)"
       },
+      fontFamily: {
+        tourney: ['Tourney', 'sans-serif'],
+      },
     },
   },
   plugins: [],

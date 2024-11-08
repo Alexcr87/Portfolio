@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .containerPrincipal{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
@@ -45,4 +46,3 @@
   margin-top: 0px; /* Eliminar margen superior */
   margin-bottom: 70px; /* Reducir el margen inferior entre el título y el Select */
 }
-

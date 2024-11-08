@@ -1,9 +1,10 @@
 
 import NavBar from "@/components/navBar/NavBar";
 import "./globals.css"
+import { tourney } from "@/fonts"
 import type { Metadata } from "next";
-import Home from "./page";
 import Footer from "@/components/footer/fotter";
+import AboutMe from "@/components/aboutMe/aboutMe";
 
 
 export const metadata: Metadata = {
@@ -21,14 +22,15 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className="bg-[url('/Fondo.jpg')] bg-cover h-14 flex" >
+      <body className="bg-black h-14 flex" >
         <div>
           <header>
             <NavBar />
           </header>
           <main className="mt-14">
-
+            <AboutMe />
             {children}
+
           </main>
           <footer>
             <Footer />

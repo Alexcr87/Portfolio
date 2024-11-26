@@ -9,7 +9,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        glow: {
+          '0%': { boxShadow: '0 0 0px rgba(255, 255, 255, 0.7)' },
+          '100%': { boxShadow: '0 0 15px 5px rgba(255, 255, 255, 0.7)' },
+        },
+      },
+      animation: {
+        "spin-slow": "spin 3s linear infinite", // Animación lenta
+        "spin-fast": "spin 0.5s linear infinite", // Animación rápida
+        glow: 'glow 1.5s ease-in-out infinite'
+      },
       colors: {
+        colorSombra:"#133062",
+        colorLogo:"#2272FF",
         background: "var(--background)",
         foreground: "var(--foreground)",
         primaryColor: "var(--primary-color)",

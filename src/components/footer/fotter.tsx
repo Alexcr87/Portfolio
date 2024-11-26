@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <p className="text-white text-sm sm:text-base md:text-lg">© Christian Rugna 2024</p>
       </div>
       <div className="flex justify-center items-center space-x-4">
-        <Link href="" target="_blank" className="hover:text-primaryColor text-gray-300">
+        <Link href="https://wa.me/5491123978708" target="_blank" className="hover:text-primaryColor text-gray-300">
           <Image src="/Whatsapp.svg" alt="Whatsapp logo" width={30} height={30} className="sm:w-8 sm:h-8 md:w-10 md:h-10" />
         </Link>
         <Link href="https://github.com/Alexcr87" target="_blank" className="hover:text-black text-gray-300">
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
         <Link href="https://www.linkedin.com/in/christian-rugna/" target="_blank" className="hover:text-primaryColor text-gray-300">
           <Image src="/Linkedin.svg" alt="Linkedin logo" width={40} height={40} className="sm:w-10 sm:h-10 md:w-12 md:h-12" />
         </Link>
-        <Link href="mailto:your-email@example.com" target="_blank" className="hover:text-primaryColor text-gray-300">
+        <Link href="mailto:alexcr87@live.com.ar" target="_blank" className="hover:text-primaryColor text-gray-300">
           <Image src="/Gmail.svg" alt="Gmail logo" width={40} height={40} className="sm:w-10 sm:h-10 md:w-12 md:h-12" />
         </Link>
       </div>
